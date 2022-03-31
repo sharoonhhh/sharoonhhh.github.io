@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Righteous&display=swap" rel="stylesheet">
+    
+    <meta= name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curriculum Vitae</title>
+        
+    <style>
+      *{
+         margin: 0;
+         padding: 0;
+      }
+
+      .box{
+        width: 1340px;
+        height: 650px;
+        border: 1px solid rgb(153, 153, 153);
+        box-shadow: 50px;
+      }
+      h1{
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Righteous';
+        color: rgb(240, 223, 223);
+        margin-top: 300px;
+        margin-right: 50px;        
+        font-size: 60pt ;
+        font-weight: 400;
+        margin-left: 50px;
+      }
+      h2{
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Righteous';
+        color: white;
+        margin-right: 50px;        
+        font-size: 20pt ;
+        font-weight: 200;
+        margin-left: 50px;
+      }
+      h3{
+        font-family: 'Poppins', sans-serif;
+        color: white;      
+        font-size: 15pt ;
+        margin-left: 50px;
+        margin-right: 600px;
+      }
+      .tab{
+        padding: 6px 9px;
+        border-top: none;
+        float: left;
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+    <script>
+      var dataku = [
+        '<h1>Get To Know me</h1><h3>Hi, my name is Sharon Hardjono and Im majoring in Visual Communication Design</h3>',
+        '<h1>Education Background</h1><h3>2013-2016 SMP Frater Kendari</h3><br><h3>2016-2017 SMP Frater Makassar</h3><br><h3>2017-2020 UPH College</h3><br><h3>2020-Now Universitas Pelita Harapan</h3>',
+        '<h1>Things im interested in</h3><h3>Painting</h3><br><h3>Sketching</h3><br><h3>Cooking</h3>'
+        ];
+    </script>
+  </head>
+  <body>
+    <div id="tab_satu" class="tab" onclick="ubahwarna('#873600','tab_satu', dataku[0])">About</div>
+    <div id="tab_dua" class="tab" onclick="ubahwarna('#283747','tab_dua', dataku[1])">Education</div>
+    <div id="tab_tiga" class="tab" onclick="ubahwarna('#0B5345','tab_tiga', dataku[2])">Interest</div>
+    <div id="jon" class="box"></div>
+  </body>
+</html>
+<script>
+  function ubahwarna(x, y, z) {
+        document.querySelector('#jon').style.backgroundColor = x;
+        document.querySelector('#jon').innerHTML = z;
+        if (y == 'tab_satu'){
+        document.querySelector('#tab_satu').style.color = 'black' ;
+        document.querySelector('#tab_dua').style.color = 'white' ;
+        document.querySelector('#tab_tiga').style.color = 'white' ;
+        document.querySelector('#tab_empat').style.color = 'white' ;
+        } else if (y == 'tab_dua') {
+        document.querySelector('#tab_satu').style.color = 'white' ;
+        document.querySelector('#tab_dua').style.color = 'black' ;
+        document.querySelector('#tab_tiga').style.color = 'white' ;
+        document.querySelector('#tab_empat').style.color = 'white' ;
+        } else if (y == 'tab_tiga') {
+        document.querySelector('#tab_satu').style.color ='white' ;
+        document.querySelector('#tab_dua').style.color ='white' ;
+        document.querySelector('#tab_tiga').style.color ='black' ;
+        document.querySelector('#tab_empat').style.color = 'white' ;
+        }
+}
+</script>
